@@ -22,6 +22,25 @@ class App extends Component {
         ]
     };
 
+    changePerson = () => {
+        this.setState({
+            persons: [
+                {
+                    name: 'another name 1',
+                    age: 81
+                },
+                {
+                    name: 'another name 2',
+                    age: 82
+                },
+                {
+                    name: 'another name 3',
+                    age: 83
+                }
+            ]
+        })
+    };
+
     render() {
         return (
             <div className="App">
@@ -29,6 +48,7 @@ class App extends Component {
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h1 className="App-title">Welcome to React</h1>
                 </header>
+                <button onClick={this.changePerson}>Change Name</button>
                 <p className="App-intro">
                     <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
                     <Person name={this.state.persons[1].name} age={this.state.persons[1].age}>
