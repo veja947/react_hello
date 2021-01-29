@@ -23,11 +23,11 @@ class App extends Component {
         description: 'this is the description in state'
     };
 
-    changePerson = () => {
+    changePerson = (newName) => {
         this.setState({
             persons: [
                 {
-                    name: 'another name 1',
+                    name: newName,
                     age: 81
                 },
                 {
@@ -50,7 +50,7 @@ class App extends Component {
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h1 className="App-title">Welcome to React</h1>
                 </header>
-                <button onClick={this.changePerson}>Change Name</button>
+                <button onClick={this.changePerson.bind(this, 'new name for first person')}>Change Name</button>
                 <p className="App-intro">
                     <Person
                         name={this.state.persons[0].name}
