@@ -19,7 +19,8 @@ class App extends Component {
                 name: 'name 3',
                 age: 38
             }
-        ]
+        ],
+        description: 'this is the description in state'
     };
 
     changePerson = () => {
@@ -37,7 +38,8 @@ class App extends Component {
                     name: 'another name 3',
                     age: 83
                 }
-            ]
+            ],
+            anotherDescription: 'this is another description in state'
         })
     };
 
@@ -52,7 +54,7 @@ class App extends Component {
                 <p className="App-intro">
                     <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
                     <Person name={this.state.persons[1].name} age={this.state.persons[1].age}>
-                        Note: this is person 2
+                        {this.state.description}
                     </Person>
                     <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
                 </p>
