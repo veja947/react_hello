@@ -52,11 +52,19 @@ class App extends Component {
                 </header>
                 <button onClick={this.changePerson}>Change Name</button>
                 <p className="App-intro">
-                    <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
-                    <Person name={this.state.persons[1].name} age={this.state.persons[1].age}>
+                    <Person
+                        name={this.state.persons[0].name}
+                        age={this.state.persons[0].age}/>
+                    <Person
+                        myClick={this.changePerson}
+                        name={this.state.persons[1].name}
+                        age={this.state.persons[1].age}
+                    >
                         {this.state.description}
                     </Person>
-                    <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
+                    <Person
+                        name={this.state.persons[2].name}
+                        age={this.state.persons[2].age}/>
                 </p>
             </div>
         );
