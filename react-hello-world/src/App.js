@@ -43,6 +43,26 @@ class App extends Component {
         })
     };
 
+    editInputHandler = (event) => {
+      this.setState({
+          persons: [
+              {
+                  name: 'another name1',
+                  age: 81
+              },
+              {
+                  name: 'another name 2',
+                  age: 82
+              },
+              {
+                  name: event.target.value,
+                  age: 83
+              }
+          ],
+          anotherDescription: 'this is another description in state'
+      })
+    };
+
     render() {
         return (
             <div className="App">
@@ -63,6 +83,7 @@ class App extends Component {
                         {this.state.description}
                     </Person>
                     <Person
+                        editInput={this.editInputHandler}
                         name={this.state.persons[2].name}
                         age={this.state.persons[2].age}/>
                 </p>
