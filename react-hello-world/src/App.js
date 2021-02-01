@@ -64,13 +64,23 @@ class App extends Component {
     };
 
     render() {
+        const buttonStyles = {
+            backgroundColor: "#ccc",
+            border: "#ccc 1px solid",
+            cursor: "pointer",
+            padding: "8px"
+        };
+
+
         return (
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h1 className="App-title">Welcome to React</h1>
                 </header>
-                <button onClick={this.changePerson.bind(this, 'new name for first person')}>Change Name</button>
+                <button
+                    style={buttonStyles}
+                    onClick={this.changePerson.bind(this, 'new name for first person')}>Change Name</button>
                 <p className="App-intro">
                     <Person
                         name={this.state.persons[0].name}
