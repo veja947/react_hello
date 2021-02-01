@@ -56,7 +56,7 @@ class App extends Component {
                         name={this.state.persons[0].name}
                         age={this.state.persons[0].age}/>
                     <Person
-                        myClick={this.changePerson}
+                        myClick={() => {this.changePerson("my new name")}}
                         name={this.state.persons[1].name}
                         age={this.state.persons[1].age}
                     >
