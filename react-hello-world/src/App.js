@@ -65,7 +65,7 @@ class App extends Component {
 
     render() {
         const buttonStyles = {
-            backgroundColor: "#ccc",
+            backgroundColor: "#cccccc",
             border: "#ccc 1px solid",
             cursor: "pointer",
             padding: "8px"
